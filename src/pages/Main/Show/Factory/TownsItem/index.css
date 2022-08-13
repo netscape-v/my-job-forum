@@ -1,0 +1,18 @@
+.townsList{
+  position: fixed;
+  overflow: hidden;
+  width: 64px;
+  height: 658.5px;
+  margin-left: -6px;
+
+  margin-top: 44px;
+
+  padding-top: 20px;
+  padding-bottom: 17px;
+  border: solid 1px red;
+}
+
+.adm-side-bar{
+  margin-top: 18px;
+  width: 70px;
+}

@@ -1,0 +1,23 @@
+/* 字体 */
+.hh2 {
+  font-family: 楷体;
+  font-weight: normal;
+  color: #2d1692;
+  font-size:30px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.townsTop{
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  z-index: 2;
+  background-color: #fff;
+
+  width: 370px;
+  margin-top: -8px;
+  margin-left: -6px;
+  
+  border: solid 1px red; 
+}

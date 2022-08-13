@@ -1,0 +1,12 @@
+.homeList{
+  width: 370px;
+  margin-left: -6px;
+
+  padding-top: 20.5%;
+  padding-bottom: 15%;
+  border: solid 1px red;
+}
+
+.adm-space-vertical{
+  width: 360px;
+}

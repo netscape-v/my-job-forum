@@ -1,0 +1,16 @@
+.topDiv{
+  display: block;
+  position: fixed;
+  z-index: 16;
+  width: 370px;
+  height: 80px;
+
+  margin-top: -8px;
+  margin-left: -6px;
+  background-color: #ffffff;
+  border: solid 1px red;
+}
+.adm-tabs-header{
+  padding-top: 10%;
+  
+}

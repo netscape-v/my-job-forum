@@ -1,0 +1,18 @@
+.tabBar {
+  display: block;
+  position: fixed;
+  
+  /*表优先级，数值越大优先级越高*/
+  z-index: 15;
+  bottom: 0px;
+  width: 370px;
+  height: 60px;
+  margin-left: -6px;
+
+
+  border: 1px solid red;
+  background-color: #ffffff;
+}
+.adm-tab-bar{
+  padding-top: 5px;
+}

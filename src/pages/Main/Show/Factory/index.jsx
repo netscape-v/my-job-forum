@@ -14,7 +14,7 @@ export default function Factory() {
 
   // 锚点回调
   // const anchorJump= () => {
-    
+
   // }
 
   return (
@@ -26,5 +26,6 @@ export default function Factory() {
         {/* 城市详情页 */}
         <TownsDetails showData={detailsData} />
     </>
+
   )
 }

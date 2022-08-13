@@ -13,16 +13,16 @@ export default function IsList(props) {
   }
 
   return (
-    <div className='townsList'>
-      <SideBar onChange={whenChange}>
-        {
-          townsTabs.map((item) => {
-            return (
-              <SideBar.Item key={item.key} title={item.title} />
-            )
-          })
-        }
-      </SideBar>
-    </div>
+      <div className='townsList'>
+        <SideBar onChange={whenChange}>
+          {
+            townsTabs.map((item) => {
+              return (
+                <SideBar.Item key={item.key} title={item.title} />
+              )
+            })
+          }
+        </SideBar>
+      </div>
   )
 }

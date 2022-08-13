@@ -6,8 +6,8 @@ import itemList from '../Data/itemList'
 import './index.css'
 
 export default function IsList() {
-  const scroller = Scroll.scroller
   const Element = Scroll.Element
+  const scroller = Scroll.scroller
 
   useEffect(() => {
     scroller.scrollTo('homeEle', {
@@ -19,7 +19,7 @@ export default function IsList() {
   }, [])
 
   return (
-    <Element className='homeList' name='homeList'>
+    <Element className='homeList' name='homeEle'>
       <List>
         <Space style={{ '--gap': '25px', '--gap-vertical': '5px' }} direction='vertical'>
           {

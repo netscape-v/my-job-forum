@@ -1,9 +1,10 @@
 .homeList{
+  position: absolute;
   width: 373px;
-  margin-left: -8px;
+  left: 8px;
 
-  padding-top: 20.5%;
-  padding-bottom: 15%;
+  padding-top: 20%;
+  padding-bottom: 16%;
   border: solid 1px red;
 }
 

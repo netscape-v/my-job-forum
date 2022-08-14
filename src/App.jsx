@@ -7,9 +7,9 @@ export default function App() {
 
   // const element = useRoutes(routers)
   return (
-    <div>
+    <>
       {/* 路由视图区 */}
       {useRoutes(routers)}
-    </div>
+    </>
   )
 }

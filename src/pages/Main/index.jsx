@@ -14,13 +14,14 @@ import '../Main/index.css'
 export default function Mian() {
 
   const navigate = useNavigate()
-  useEffect(() => { navigate('/main/show/home/isList') }, [])
+
+  // 组件一加载就跳到默认列表
+  useEffect(() => { navigate('/main/select') }, [])
 
   const tabBarEvt = (isKey) => {
-    navigate('/main/show', {
+    navigate('/main/select', {
       state: isKey
     })
-    console.log(isKey)
   }
 
   // 标签
@@ -52,17 +53,10 @@ export default function Mian() {
     },
   ]
 
-  // 接收用户名
-  const { state: name } = useLocation()
-
-  const meet = () => {
-    console.log(name)
-  }
   return (
     <>
       {/* 展示区 */}
-        <Outlet />
-        
+      <Outlet />
       {/* 下面菜单栏 */}
       <div className='tabBar'>
         <TabBar safeArea onChange={tabBarEvt}>

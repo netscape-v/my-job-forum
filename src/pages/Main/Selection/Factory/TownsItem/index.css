@@ -1,16 +1,13 @@
 .townsList {
-  display: inline-block;
   position: fixed;
   overflow: hidden;
+  top: 85px;
+  left: 0px;
   width: 65px;
-  height: 660px;
-
-  margin-top: 81px;
-  margin-left: -8px;
+  height: 662px;
   border: solid 1px rgb(13, 100, 20);
 }
 
 .adm-side-bar-items {
   width: 65px;
-  padding-top: 2px;
 }

@@ -6,7 +6,7 @@ import Factory from './Factory'
 import Message from './Message'
 import Personal from './Personal'
 
-export default function Show() {
+export default function Selection() {
   const { state: isKey } = useLocation()
   // 根据Key值 呈现不同的组件标签
   switch (isKey) {

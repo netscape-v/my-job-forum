@@ -1,0 +1,15 @@
+.townsDetails {
+  display: flex;
+  width: 307px;
+  height: 500px;
+  margin-top: 20%;
+}
+
+.townsDetails-2 {
+  /* margin-bottom: 20%; */
+  border: solid 1px red;
+}
+
+.townsDetails-2 h3 {
+  padding: 0 16px 0 15px;
+}

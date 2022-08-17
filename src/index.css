@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 关键 */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 关键 */
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

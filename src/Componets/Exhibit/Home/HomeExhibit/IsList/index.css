@@ -1,0 +1,12 @@
+.homeList {
+  width: 373px;
+  margin-top: 21%;
+  border: solid 1px red;
+
+  /* 剩余空间占满 */
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

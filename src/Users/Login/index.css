@@ -1,0 +1,47 @@
+.login {
+  width: 80%;
+  margin-top: 20%;
+  margin-left: 10%;
+  /* border: solid 1px; */
+}
+
+/* 头像 */
+.portrait {
+  width: 80px;
+  height: 80px;
+  margin:0 auto;
+  /* border: solid 1px; */
+}
+
+/* 输入框 */
+.input1 {
+  width: 60%;
+  height: 30px;
+  margin-top: 30%;
+  margin-left: 20%;
+  /* border: solid 1px; */
+}
+.input2 {
+  width: 60%;
+  height: 30px;
+  margin-top: 3px;
+  margin-left: 20%;
+  margin-bottom: 5px;
+  /* border: solid 1px; */
+}
+
+/* 链接 */
+.link1{
+  margin-top: 2%;
+  display: inline-block;
+  width: 20%;
+  /* border: solid 1px; */
+}
+.link2{
+  margin-top: 2%;
+  float: right;
+  width: 20%;
+  /* border: solid 1px; */
+}
+
+/* 自己做的样式真的很差 */

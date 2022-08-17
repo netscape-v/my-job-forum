@@ -1,0 +1,25 @@
+.townsList {
+  /* 上 右 下 左 */
+  height: 99.5%;
+  overflow: auto;
+  border: solid 1px rgb(76, 0, 255);
+}
+
+ul{
+  width: 100px;
+  list-style: none;
+  overflow: auto;
+  border: solid 1px;
+}
+li {
+  /* flex-shrink: 0; */
+  line-height: 45px;
+  padding: 0 10px;
+}
+
+.adm-side-bar {
+  /* margin-bottom: 23%; */
+  width: 66px;
+  height: 100%;
+
+}

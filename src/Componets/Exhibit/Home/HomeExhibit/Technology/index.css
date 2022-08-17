@@ -1,0 +1,8 @@
+.technology{
+  margin-top: 22%;
+  width: 373px;
+  border: solid 1px red;
+  
+  display: flex;
+  justify-content: center;
+}

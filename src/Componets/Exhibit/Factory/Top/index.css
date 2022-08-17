@@ -1,0 +1,19 @@
+/* 字体 */
+h2 {
+  font-family: 楷体;
+  font-weight: normal;
+  color: #2d1692;
+  font-size: 28px;
+}
+
+.townsTop {
+  flex-shrink: 0;
+  z-index: 2;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top: 6%;
+  padding-left: 5%;
+  height: 8%;
+  width: 94%;
+  border: solid 1px red;
+}

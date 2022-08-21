@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-
+  touch-action: pan-y;
   /* 去边界 */
   /* border: 0px !important; */
 }

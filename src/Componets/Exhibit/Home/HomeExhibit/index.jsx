@@ -13,7 +13,6 @@ export default function HomeExhibit(props) {
     case 'jobdata':
       return <JobData />
     default:
-      // 此处需要一个路由，来选择性渲染展示区的详情 并且加上评论功能
       return <IsList />
   }
 }

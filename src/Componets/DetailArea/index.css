@@ -1,0 +1,6 @@
+.detailArea{
+  height: 100%;
+  display: flex;
+
+  border: solid 1px red;
+}

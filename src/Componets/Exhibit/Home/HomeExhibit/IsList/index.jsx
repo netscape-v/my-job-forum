@@ -2,18 +2,19 @@ import React, { useEffect, useRef } from 'react'
 import { Card, Space, AutoCenter, Modal, Toast, PullToRefresh } from 'antd-mobile'
 import { CloseOutline, CheckOutline, StopOutline } from 'antd-mobile-icons'
 import { sleep } from 'antd-mobile/es/utils/sleep'
-import PubSub from 'pubsub-js'
+import { useNavigate } from 'react-router-dom'
+
 import itemList from '../../Data/itemList'
+
 import './index.css'
-
 export default function IsList() {
-
   // 此处需要一个生命周期钩子 来初始化后台数据并 展示 '今日头条' 功能
 
-  // 重新渲染
+  const navigate = useNavigate()
+
+  // 点击了卡片直接带着参数跳转到详情页
   const onClickCard = (cardKey) => {
-    PubSub.publish('isListToHome',{cardKey})
-    console.log('点击了卡片', cardKey)
+    navigate('/detail', { state: cardKey })
   }
 
   // 卡片内部的 X 
@@ -78,7 +79,6 @@ export default function IsList() {
   }
 
   return (
-    // 此处还需要选择性渲染，路由
     <div className='homeList' onScroll={scrollEvt} ref={divRef}>
       <AutoCenter>
         {/* 下拉刷新 */}
@@ -121,3 +121,5 @@ export default function IsList() {
     </div >
   )
 }
+
+

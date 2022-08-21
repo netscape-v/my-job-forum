@@ -11,7 +11,7 @@ export default function JobData() {
     title: {
       text: '工资水平'
     },
-    grid: { top: 50, right: 10, bottom: 90, left: 50 },
+    grid: { top: 50, right: 10, bottom: 120, left: 50 },
     legend: {
       data: ['薪资'],
     },
@@ -57,7 +57,7 @@ export default function JobData() {
         name: '访问来源',
         type: 'pie',
         radius: '45%',
-        center: ['50%', '46%'],
+        center: ['50%', '42%'],
         data: [
           { value: 600, name: 'UG' },
           { value: 300, name: 'Mastercam' },
@@ -86,6 +86,7 @@ export default function JobData() {
 
       <div className='pie'>
         <ReactECharts
+          className='piePosition'
           option={option1} />
       </div>
     </div>

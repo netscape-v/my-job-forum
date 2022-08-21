@@ -1,7 +1,7 @@
 .line{
-  padding-top: 20px;
+  padding-top: 10px;
   width: 370px;
-  height: 240px;
+  height: 220px;
   border: solid 1px red;
 }
 
@@ -10,11 +10,18 @@
   height: 240px;
   border: solid 1px red;
 }
+.piePosition div{
+  padding: 0px !important;
+  text-align: center !important;
+
+  width: 55px;
+  height: 20px;
+}
 
 .lineAndPie{
   margin: 0 auto;
   height: 650px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }

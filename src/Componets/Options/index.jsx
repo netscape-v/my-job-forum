@@ -48,11 +48,12 @@ export default function Options() {
       icon: <UserOutline />,
     },
   ]
+ 
   return (
     <>
       {/* 下面菜单栏 */}
       <div className='tabBar'>
-        <TabBar safeArea onChange={tabBarEvt}>
+        <TabBar onChange={tabBarEvt}>
           {tabs.map(item => (
             <TabBar.Item key={item.key} icon={item.icon} title={item.title} badge={item.badge} />
           ))}

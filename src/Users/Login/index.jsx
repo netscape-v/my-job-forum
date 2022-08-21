@@ -26,21 +26,6 @@ export default () => {
       state: { name: username }
     })
   }
-
-  // 清空
-  const clearBtn = () => {
-    console.log(passwordRef.current)
-    usernameRef.current.clear(setUsername(''))
-    passwordRef.current.clear(setPassword(''))
-
-    console.log('清空完毕')
-  }
-  // 注册跳转区
-  const registerBtn = () => {
-    navigate('/register')
-    console.log('跳')
-  }
-
   return (
     <div className='login'>
       <div className='portrait'>

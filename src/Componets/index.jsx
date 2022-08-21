@@ -1,18 +1,18 @@
 import { useEffect } from 'react'
-import { Outlet,useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Options from './Options'
-import Exhibit from './Exhibit'
+import './index.css'
+
 export default function Main() {
-  const navigate =useNavigate()
+  const navigate = useNavigate()
   useEffect(() => {
     navigate('/main/home')
-  },[])
-  
+  }, [])
+
   return (
-    <>
-      {/* <Exhibit /> */}
-      <Outlet/>
+    <div className='rootDiv'>
+      <Outlet />
       <Options />
-    </>
+    </div>
   )
 }

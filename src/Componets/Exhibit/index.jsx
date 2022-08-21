@@ -6,25 +6,30 @@ import Factory from './Factory'
 import Message from './Message'
 import Personal from './Personal'
 
+// 主要选项栏
 export default function Exhibit() {
+  // 管理key的状态
   const [realKey, setKey] = useState('')
+  // 展示区订阅option发布的消息key
   useEffect(() => {
     let isToken = PubSub.subscribe('option2exhibit', (_, data) => {
+      // 改变状态，switch 就会切换到key所对应的组件
       setKey(data.isKey)
     })
+    // 组件卸载停止订阅
     return () => { PubSub.unsubscribe(isToken) }
   }, [])
 
   switch (realKey) {
-    case 'factory':
+    case 'Factory':
       return (
         <Factory />
       )
-    case 'message':
+    case 'Message':
       return (
         <Message />
       )
-    case 'personal':
+    case 'Personal':
       return (
         <Personal />
       )

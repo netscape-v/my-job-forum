@@ -1,6 +1,7 @@
 .townsList {
+  flex: 1;
   /* 上 右 下 左 */
-  height: 99.5%;
+  height: 99.6%;
   overflow: auto;
   border: solid 1px rgb(76, 0, 255);
 }

@@ -3,6 +3,9 @@ import ReactECharts from 'echarts-for-react'
 
 import './index.css'
 export default function JobData() {
+
+  // 此处需要生命周期钩子 来后台获取 图形数据
+
   // 折线图 假数据
   const option = {
     title: {
@@ -32,7 +35,7 @@ export default function JobData() {
     ]
   }
 
-  // 饼图 假数据
+  // 饼图 假数据  真数据要从后台去拿
   const option1 = {
     title: {
       text: '编程软件',
@@ -54,7 +57,7 @@ export default function JobData() {
         name: '访问来源',
         type: 'pie',
         radius: '45%',
-        center: ['50%', '50%'],
+        center: ['50%', '46%'],
         data: [
           { value: 600, name: 'UG' },
           { value: 300, name: 'Mastercam' },
@@ -72,6 +75,7 @@ export default function JobData() {
       }
     ]
   }
+
   return (
     <div className='lineAndPie'>
       <div className='line'>

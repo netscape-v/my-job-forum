@@ -1,6 +1,10 @@
+/* 全局样式 很重要 */
 * {
   margin: 0;
   padding: 0;
+
+  /* 去边界 */
+  /* border: 0px !important; */
 }
 
 /* 关键 */
@@ -9,6 +13,7 @@ body {
   height: 100%;
 }
 
+/* 关键 */
 body {
   display: flex;
   flex-direction: column;

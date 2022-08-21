@@ -1,12 +1,22 @@
 .homeList {
+  flex: 1;
   width: 373px;
-  margin-top: 21%;
-  border: solid 1px red;
+  padding: 8px 0 8px 0;
+  border: solid 1px rgb(25, 0, 255);
 
+  background-color: gray;
   /* 剩余空间占满 */
-  overflow: auto;
+  overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
   display: none;
+}
+.card {
+  width: 335px;
+  height: 100px;
+}
+/* 限定 x 的宽度 */
+.extra{
+  width: 15px;
 }

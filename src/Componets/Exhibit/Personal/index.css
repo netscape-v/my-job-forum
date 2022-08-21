@@ -1,6 +1,9 @@
-.factory{
+.personal{
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  border: solid 1px;
+}
+.personal-2{
+  flex: 1;
 }

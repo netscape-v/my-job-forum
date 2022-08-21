@@ -1,52 +1,68 @@
-import React, { useEffect } from 'react'
-// import Scroll from 'react-scroll'
+import React, { useEffect, useState } from 'react'
+import PubSub from 'pubsub-js'
+import { Card, Space, AutoCenter } from 'antd-mobile'
+
+// 这是一堆假数据，真数据要从后台获取
+import towns from '../../Data/towns'
 
 import './index.css'
-export default function TownsDetails(props) {
-
+export default function TownsDetails() {
+  const [realKey, setRealKey] = useState('')
   // 获取item的key
-  const key = props.showData
+  // 第一个生命周期钩子
   useEffect(
     () => {
-      // 在这里发axios请求,根据key值获取详情
-      console.log('在这里发axios请求')
+      PubSub.subscribe('listToDetils', (_, data) => {
+        setRealKey(data.key)
+      })
+    }
+    , [])
+
+  // 第二个生命周期钩子
+  useEffect(
+    () => {
       // 执行锚点
       scrollToAnchor()
-    }
-    , [key])
-
-  // 必须用 react-scroll 的标签 Element 才可以跳转锚点
-  // const Element = Scroll.Element;
-  // 创建跳转对象
-  // const scroller = Scroll.scroller
+      // 在这里发axios请求,根据key值获取详情
+      // console.log('这里发axios请求')
+    }, [realKey])
 
   // 设置锚点函数
   const scrollToAnchor = () => {
-    // H5 锚点
-    document.getElementById('townsDetailsId').scrollTo({ top: -400, behavior: 'smooth' })
-    console.log('锚点')
-
-    /* scroller.scrollTo('elementText', {
-      // 滚动的时间
-      duration: 1000,
-      // 滚动延时, 多少毫秒后开始滚动
-      delay: 50,
-      // 启用滚动
-      // smooth: true,
-      // 正数向下，负数向上
-      offset: 1000
-    }) */
+    // H5 锚点，锚点在overflow 的管控区才会有效
+    document.getElementById('townsDetailsId').scrollTo({ top: -100, behavior: 'smooth' })
+    // document.getElementById('townsDetailsId').scrollIntoView()
   }
-
 
   return (
     <div className='townsDetails'>
       <div id='townsDetailsId' className='townsDetails-2'>
-        <h3>
-          TownsDetails+{key},
+        <AutoCenter>
+          <Space style={{ '--gap': '8px' }} block direction='vertical'>
+            {
+              towns.map((item) => {
+                return (
+                  <Card
+                    title={<div>工厂名称，在此处</div>}
+                    key={item.key}
+                  >
+                    <div className='cardDiv'>
+                      {item.title}
+                    </div>
+                  </Card>
+                )
+              })
+            }
+          </Space>
+        </AutoCenter>
+
+
+        {/* <h3 id='townsDetailsId'>
+          TownsDetails+{realKey},
           气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。气候科学家之前就发出了警告，随着全球变暖，热浪会出现得更加频繁，气温也将更高。但根据上个月发表的一项研究[1]，这个未来比研究人员担心的更早来临了，尤其是在西欧这个热浪“高发区”。这些屡屡刷新纪录的热浪不仅一浪高过一浪，甚至完全超出了气候模型的预测。
-          TownsDetails+{key},
-        </h3>
+          TownsDetails+{realKey},
+        </h3> */}
+
       </div>
     </div>
   )

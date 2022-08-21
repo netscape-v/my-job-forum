@@ -5,8 +5,7 @@ export default function ListAndDetils() {
   return (
     <div className='listAndDetils'>
       <TownsList />
-      {/* <TownsDetails /> */}
-      
+      <TownsDetails />
     </div>
   )
 }

@@ -1,4 +1,6 @@
 .listAndDetils {
+  flex: 1;
+  display: flex;
   overflow: auto;
   border: solid 1px rgb(255, 0, 179);
 }

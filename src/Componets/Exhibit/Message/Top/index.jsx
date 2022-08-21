@@ -1,7 +1,8 @@
 import React from 'react'
+import './index.css'
 
 export default function Top() {
   return (
-    <div>Top</div>
+    <div className='msgTop'>Top</div>
   )
 }

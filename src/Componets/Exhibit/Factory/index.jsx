@@ -1,5 +1,5 @@
 import Top from './Top'
-import ListAndDetils from './ListAndDetils'
+import TownsAndFactory from './TownsAndFactory'
 import './index.css'
 export default function Factory() {
   return (
@@ -7,7 +7,7 @@ export default function Factory() {
       {/* top区 */}
       <Top />
       {/* 列表和详情 */}
-      <ListAndDetils />
+      <TownsAndFactory />
     </div>
   )
 }

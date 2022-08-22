@@ -12,8 +12,8 @@ export default () => {
   // 编程式路由导航API
   const navigate = useNavigate()
 
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState('admin')
+  const [password, setPassword] = useState('1234')
 
   const usernameRef = useRef()
   const passwordRef = useRef()
@@ -22,9 +22,7 @@ export default () => {
   const loginBtn = () => {
     console.log('登录成功跳转到下一个')
     console.log(username, password)
-    navigate('/main', {
-      state: { name: username }
-    })
+    navigate('/main')
   }
   return (
     <div className='login'>

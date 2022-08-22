@@ -1,0 +1,11 @@
+.detailArea {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detailDiv {
+  height: 100%;
+  flex: 1;
+  border: solid 1px red;
+}

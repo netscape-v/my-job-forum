@@ -14,7 +14,7 @@ export default function IsList() {
 
   // 点击了卡片直接带着参数跳转到详情页
   const onClickCard = (cardKey) => {
-    navigate('/detail', { state: cardKey })
+    navigate('/newsDetails', { state: cardKey })
   }
 
   // 卡片内部的 X 

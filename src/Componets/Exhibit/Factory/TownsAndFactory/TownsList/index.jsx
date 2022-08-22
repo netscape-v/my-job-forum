@@ -14,7 +14,7 @@ export default function TownsList() {
 
   // 当选项发生改变的时候
   const whenChange = (key = '01') => {
-    PubSub.publish('listToDetils', { key })
+    PubSub.publish('townsToFactory', { key })
   }
 
   return (

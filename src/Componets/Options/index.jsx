@@ -1,8 +1,7 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { Badge, TabBar } from 'antd-mobile'
 import { useNavigate } from 'react-router-dom'
 
-import PubSub from 'pubsub-js'
 import {
   AppOutline,
   MessageOutline,
@@ -12,11 +11,17 @@ import {
 } from 'antd-mobile-icons'
 
 import './index.css'
+export default function Options(props) {
+  const [currentKey, setKey] = useState('Home')
 
-export default function Options() {
+  useEffect(() => {
+    // 设置activeKey
+    setKey(props.activeKey)
+  }, [])
+
   const navigate = useNavigate()
   const tabBarEvt = (isKey) => {
-    // PubSub.publish('option2exhibit', { isKey })
+    setKey(isKey)
     navigate(`/main/${isKey}`)
   }
 
@@ -48,12 +53,12 @@ export default function Options() {
       icon: <UserOutline />,
     },
   ]
- 
+
   return (
     <>
       {/* 下面菜单栏 */}
       <div className='tabBar'>
-        <TabBar onChange={tabBarEvt}>
+        <TabBar activeKey={currentKey} onChange={tabBarEvt}>
           {tabs.map(item => (
             <TabBar.Item key={item.key} icon={item.icon} title={item.title} badge={item.badge} />
           ))}
